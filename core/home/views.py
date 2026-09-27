@@ -7,11 +7,14 @@ def home(request):
              {'name':'Het',"age":23},
              {'name':'Bhautik',"age":15}
              ]
-    return render(request,"index.html",context={'peoples':peoples})
+
+    return render(request,"index.html",context={'peoples':peoples,'page':'home'})
 
 def about(request):
-    return render(request,"about.html")
+    cont={'page':'about'}
+    return render(request,"about.html",cont)
 
 def contact(request):
-    return render(request,"contact.html")
+    cont={'page':'contact'}
+    return render(request,"contact.html",cont)
 
